@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-    返回api的原始数据
+    返回api得到的原始数据
 '''
 import requests
 

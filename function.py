@@ -27,9 +27,9 @@ def function_get_info(mid):
         data['sex'] = json_data['sex']
         data['face'] = json_data['face']
         data['regtime'] = json_data.get('regtime',0)        #解决没有注册时间的问题
-        data['place'] = json_data.get('place',0)
-        data['birthday'] = json_data['birthday']
-        data['sign'] = json_data['sign']
+        data['place'] = json_data.get('place','null')
+        data['birthday'] = json_data.get('birthday','null')
+        data['sign'] = json_data.get('sign','null')
         data['current_level'] = json_data['level_info']['current_level']
         return data
     else:

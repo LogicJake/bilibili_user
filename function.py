@@ -16,7 +16,6 @@ def function_get_info(mid):
     if res.find('place') == -1:
         return 0        #代表ip被封
     res = json.loads(res)
-    print(res)
     if res['status']:
         json_data = res['data']
         data['mid'] = json_data['mid']

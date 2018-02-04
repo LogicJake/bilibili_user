@@ -40,6 +40,7 @@ while(1):
     data = []
     res = function_get_info(i)
     if res == 0:
+        print("sleeping。。。。。。。")
         time.sleep(10*60)       #ip被封睡眠10min
     elif res != None:
         data.append(res)

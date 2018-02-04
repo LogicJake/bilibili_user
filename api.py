@@ -17,4 +17,4 @@ def get_info(mid):
         'Origin':'https://space.bilibili.com'
     }
     response = requests.post('https://space.bilibili.com/ajax/member/GetInfo',headers=header,data=data)
-    return response.content.decode('unicode-escape')
+    return response.text

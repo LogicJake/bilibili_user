@@ -13,7 +13,7 @@ def function_get_info(mid):
     '''
     data = {}
     res = get_info(mid)
-    if res.find('place') == -1:
+    if res.find('status') == -1:
         return 0        #代表ip被封
     res = json.loads(res)
     if res['status']:

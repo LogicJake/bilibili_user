@@ -35,7 +35,7 @@ def get_info(i,step):
         time.sleep(1)
 
 Global.__init__()
-i = 19876
+i = 22975
 while(1):
     data = []
     res = function_get_info(i)

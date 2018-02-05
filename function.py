@@ -18,7 +18,7 @@ def function_get_info(mid):
     res = json.loads(res)
     if res['status']:
         json_data = res['data']
-        data['mid'] = json_data.get('mid','null')
+        data['mid'] = json_data.get('mid',0)
         data['name'] = json_data['name']
         if json_data['approve']:
             data['approve'] = 1

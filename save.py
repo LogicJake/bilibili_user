@@ -17,5 +17,6 @@ def save_user_info(datas):
         cursor.close()
         conn.close()
     except Exception as e:
+        print(time.ctime())
         print(sql)
-        print(time.ctime()+e)
+        print(e)

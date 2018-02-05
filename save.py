@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from common import Global
 import pymysql
+import time
 
 def save_user_info(datas):
     try:
@@ -16,4 +17,4 @@ def save_user_info(datas):
         cursor.close()
         conn.close()
     except Exception as e:
-        print(e)
+        print(time.ctime()+sae)

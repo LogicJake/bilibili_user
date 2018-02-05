@@ -35,16 +35,16 @@ def get_info(i,step):
         time.sleep(1)
 
 Global.__init__()
-i = 1
+i = 678
 while(1):
     data = []
     res = function_get_info(i)
     if res == 0:
-        print("sleeping。。。。。。。")
+        print(time.ctime()+"sleeping。。。。。。。")
         time.sleep(10*60)       #ip被封睡眠10min
     elif res != None:
         data.append(res)
     if data.__len__() != 0:
         save_user_info(data)
     i = i + 1
-    time.sleep(3)
+    time.sleep(1.5)

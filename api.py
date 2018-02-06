@@ -4,11 +4,11 @@
 '''
 import requests
 
-def get_info(mid):
+def get_info(mid,proxy=0):
     data = {'mid':mid,'csrf':'null'}
     header = {
         'Accept':'*/*',
-        'Connection':'keep-alive',
+        'Connection':'close',
         'Content-Length':'20',
         'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
@@ -16,5 +16,12 @@ def get_info(mid):
         'Referer':'https://space.bilibili.com',
         'Origin':'https://space.bilibili.com'
     }
-    response = requests.post('https://space.bilibili.com/ajax/member/GetInfo',headers=header,data=data)
-    return response.text
+    try:
+        if proxy == 0:
+            response = requests.post('http://space.bilibili.com/ajax/member/GetInfo',headers=header,data=data,timeout=5)
+        else:
+            response = requests.post('http://space.bilibili.com/ajax/member/GetInfo', headers=header, data=data,proxies = proxy,timeout=10)
+        response.close()
+        return response.text
+    except Exception as e:
+        return "fail"

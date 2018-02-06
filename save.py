@@ -9,9 +9,9 @@ def save_user_info(datas):
                                passwd=Global.get_value('password'), db=Global.get_value('dbname'),
                                port=Global.get_value('port'), charset='utf8',autocommit = True)
         cursor = conn.cursor()
-        sql = "INSERT INTO usr_info(mid, name, approve,sex,face,regtime,place,birthday,sign) VALUES "
+        sql = "INSERT INTO usr_info(mid, name, approve,sex,face,regtime,place,birthday,sign,tid) VALUES "
         for data in datas:
-            sql  = sql+"({},'{}',{},'{}','{}',{},'{}','{}','{}'),".format(data['mid'],data['name'].replace("'","''"),data['approve'],data['sex'],data['face'],data['regtime'],data['place'],data['birthday'],data['sign'].replace("'","''"))
+            sql  = sql+"({},'{}',{},'{}','{}',{},'{}','{}','{}','{}'),".format(data['mid'],data['name'].replace("'","''"),data['approve'],data['sex'],data['face'],data['regtime'],data['place'],data['birthday'],data['sign'].replace("'","''"),data['tid'])
         sql = sql[:-1]
         cursor.execute(sql)
         cursor.close()

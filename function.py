@@ -2,7 +2,7 @@
 import json
 import requests
 def get_proxy():
-    response = requests.get('')     
+    response = requests.get('')
     res = json.loads(response.text)
     if res['code'] == 0:
         try:

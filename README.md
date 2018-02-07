@@ -4,7 +4,7 @@
 ![Travis](https://img.shields.io/travis/rust-lang/rust.svg)
 
 ## 介绍
-从接口http://space.bilibili.com/ajax/member/GetInfo获取b站用户非隐私信息。post方法，post数据data = {'mid':mid,'csrf':'null'}，mid为用户id，从1开始递增。每隔1.5s访问请求不会被封IP。
+从接口 http://space.bilibili.com/ajax/member/GetInfo 获取b站用户非隐私信息。post方法，post数据data = {'mid':mid,'csrf':'null'}，mid为用户id，从1开始递增。每隔1.5s访问请求不会被封IP。
 
 ## 返回数据格式
 
